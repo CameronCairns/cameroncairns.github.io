@@ -1,103 +1,23 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+---
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Home Page of Cameron Cairns : " />
+<div class="home">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+  <h1 class="page-heading">Posts</h1>
 
-    <title>Home Page of Cameron Cairns</title>
-  </head>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-  <body>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/CameronCairns">View on GitHub</a>
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-          <h1 id="project_title">Home Page of Cameron Cairns</h1>
-          <h2 id="project_tagline"></h2>
-
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="about-me" class="anchor" href="#about-me"><span class="octicon octicon-link"></span></a>About Me</h3>
-
-<p>I'm a Computer Science and Engineering major in my senior year at the University of California Davis. I am expecting to graduate in March, 2015. I am interested in developing for the mobile and internet marketplace, preferably something involved in music or planning events such as concerts. I am also an avid player of Paradox Interactive games such as Crusader Kings 2, and Europa Universalis. I also run a <a href="http://www.kdvs.org">student radio station</a> in my free time. </p>
-
-<h3>
-<a name="current-projects" class="anchor" href="#current-projects"><span class="octicon octicon-link"></span></a>Current Projects</h3>
-
-<p>I am currently working on a vehicle to vehicle networking application using the Android OS to stream video from cars using WIFI P2P. I'm also designing a radio streaming app for KDVS when I'm not busy with school or radio station work.</p>
-
-<h3>
-<a name="languages" class="anchor" href="#languages"><span class="octicon octicon-link"></span></a>Languages</h3>
-
-<p>C       2 Years 
-C++         2 Years
-Java        6 Weeks (Computer Languages Course and Self Study)
-SQL     10 Weeks (Databases Course)
-OpenGl  10 Weeks (Computer Graphics Course)
-Others: Python, Android SDK, Matlab, LISP, Prolog</p>
-
-<h3>
-<a name="skills" class="anchor" href="#skills"><span class="octicon octicon-link"></span></a>Skills:</h3>
-
-<ul>
-<li>Experience in managing the direction of an organization, identifying the needs of an organization, strategic planning for both the immediate and distant future, and following through with those plans to ensure their execution.</li>
-</ul><h3>
-<a name="job-experience" class="anchor" href="#job-experience"><span class="octicon octicon-link"></span></a>Job Experience:</h3>
-
-<p>General Manager of KDVS 90.3 FM (May 2013 – April 2014)</p>
-
-<ul>
-<li>Learning to manage 22 paid staff and over 100 active volunteers</li>
-<li>Learned the importance of managing deadlines with a $120,000 radio transmitter project</li>
-<li>Professional interactions with people 10 – 40 years my senior, some of them being employees</li>
-</ul><p>Resident Computing Advisor (April 2012 – December 2013)</p>
-
-<ul>
-<li>Improved customer service skills</li>
-<li>Gained insight on usage patterns of novice computer users</li>
-<li>Learned to work as a team with coworkers meeting for only one hour each week</li>
-</ul><p>KDVS 90.3 FM Business Manager ( June 2012 – May 2013)</p>
-
-<ul>
-<li>Experienced the departmentalization of services within a large organization</li>
-<li>Learned how to read and stay within a $100,000 budget</li>
-<li>Experience purchasing processes within large organizations</li>
-</ul><h3>
-<a name="more-info" class="anchor" href="#more-info"><span class="octicon octicon-link"></span></a>More info</h3>
-
-<p>Thank you for taking the time to visit my website. For More information please feel free to contact me at <a href="mailto:cameron@cameroncairns.com">cameron@cameroncairns.com</a></p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-47902274-1");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
-
-
-  </body>
-</html>
+</div>
